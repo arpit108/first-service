@@ -6,14 +6,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/")
 public class ServiceController {
 
     @GetMapping
+    @RequestMapping("/one1")
     public String getName(@RequestHeader("x-location") String location)
     {
         return "My First Service from "+location +" !!!";
     }
 
+
+    @GetMapping
+    @RequestMapping("/one")
+    public String test()
+    {
+        return "Success !!";
+    }
 
 }
