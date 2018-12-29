@@ -6,10 +6,18 @@ spring:
 server:
   port: 8081
 
+security:
+  basic:
+    enabled: true
+  user:
+    name: arpit
+    password: bhargava
 
 eureka:
   client:
-    register-with-eureka: true
+    enabled: false
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+
 
